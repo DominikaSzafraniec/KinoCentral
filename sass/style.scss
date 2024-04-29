@@ -230,8 +230,8 @@ body {
 .aboutus {
   margin: 0 auto;
   padding: 3em 2em;
-  overflow-x: hidden;
   &__doodle {
+    overflow-x: hidden;
     img {
       height: 50px;
     }
