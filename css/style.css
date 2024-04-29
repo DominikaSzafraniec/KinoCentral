@@ -1,0 +1,386 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  scroll-padding-top: 82px;
+}
+
+body {
+  font-family: "Lora", serif;
+  overflow-x: hidden;
+  background-color: #F2F1EC;
+}
+
+.sticky-body {
+  overflow: hidden;
+}
+
+.wrapper {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1400px;
+}
+
+.header {
+  position: relative;
+  background-image: url("../img/2.jpg");
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  color: #fff;
+  z-index: 0;
+  text-align: center;
+  overflow-x: hidden;
+}
+.header .wrapper {
+  height: 100%;
+}
+.header__shadow {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: -1;
+}
+.header__box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  height: 100%;
+  padding: 8em 3em 5em 3em;
+}
+.header__title-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 3em;
+}
+.header__title {
+  font-size: 4.8rem;
+  font-family: "Abril Fatface", serif;
+  font-weight: normal;
+}
+.header__title-info {
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+.header__phone-number {
+  font-size: 1.6rem;
+}
+.header__underline {
+  width: 40px;
+  height: 2px;
+  background-color: #fff;
+}
+.header__info-box {
+  margin-bottom: 2em;
+  font-size: 1.6rem;
+}
+.header__info-time {
+  text-transform: uppercase;
+}
+.header__info-time--bold {
+  font-weight: bold;
+}
+.header__info-summer-season {
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+.header__description {
+  margin-bottom: 2em;
+  font-size: 1.4rem;
+}
+.header__description-info:nth-child(1) {
+  margin-bottom: 0.5em;
+}
+.header__button-contact {
+  padding: 0.5em 1em;
+  color: #333;
+  background-color: #fff;
+  border: none;
+  text-decoration: none;
+  font-size: 1.8rem;
+  font-family: "Abril Fatface", serif;
+  text-transform: uppercase;
+  border: 1px solid transparent;
+  -webkit-transition: background-color 0.3s, border 0.3s;
+  transition: background-color 0.3s, border 0.3s;
+  z-index: 0;
+}
+.header__button-contact:hover {
+  background-color: #d3ccaa;
+  border: 1px solid black;
+}
+.header__link {
+  color: #fff;
+}
+.header__link i {
+  font-size: 25px;
+}
+.header__btns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  width: 100%;
+  z-index: 0;
+}
+.header__icons {
+  display: none;
+}
+
+.nav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  padding: 2em 2em 1.5em 1.5em;
+  background-color: rgba(0, 0, 0, 0.75);
+  z-index: 10;
+}
+.nav .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+.nav__btn {
+  position: relative;
+  top: 0;
+  padding: 0.25em 0.5em;
+  font-size: 2.4rem;
+  right: 0;
+  cursor: pointer;
+  background: none;
+  border: none;
+  color: #fff;
+  z-index: 11000;
+}
+.nav__box {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 100vh;
+  background-color: #F2F1EC;
+}
+.nav__items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100%;
+  z-index: 1000;
+}
+.nav__item {
+  margin-top: 5em;
+  list-style-type: none;
+}
+.nav__item:nth-child(1) {
+  margin-top: 0;
+}
+.nav__link {
+  padding: 0.5em 1em;
+  text-decoration: none;
+  color: #333;
+  font-family: "Abril Fatface", serif;
+  text-transform: uppercase;
+  font-size: 2.8rem;
+}
+
+.aboutus {
+  margin: 0 auto;
+  padding: 3em 2em;
+  overflow-x: hidden;
+}
+.aboutus__doodle img {
+  height: 50px;
+}
+.aboutus__title {
+  display: inline;
+  font-size: 3rem;
+  font-weight: bold;
+  font-family: "Abril Fatface", serif;
+}
+.aboutus__title-info {
+  display: inline;
+  font-size: 1.4rem;
+}
+.aboutus img {
+  width: 100%;
+}
+
+.active {
+  display: block;
+}
+
+.btn-color {
+  color: #333;
+}
+
+@media (min-width: 568px) {
+  .header__title {
+    font-size: 6.8rem;
+  }
+  .header__title-info {
+    font-size: 1.8rem;
+  }
+  .nav__btn {
+    font-size: 3.2rem;
+  }
+}
+@media (min-width: 768px) {
+  .header__box {
+    padding: 12em 3em 5em 3em;
+  }
+}
+@media (min-width: 992px) {
+  .nav {
+    right: 0;
+    padding: 3em 4em;
+  }
+  .nav__btn {
+    display: none;
+  }
+  .nav__box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    position: static;
+    height: auto;
+    background: none;
+  }
+  .nav__items {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .nav__item {
+    margin-top: 0;
+  }
+  .nav__link {
+    color: #fff;
+    font-size: 2.4rem;
+    -webkit-transition: background-color 0.3s, color 0.3s;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  .nav__link:hover {
+    background-color: #d3ccaa;
+    color: #333;
+  }
+  .header__box {
+    padding: 13rem 10rem 10rem 10rem;
+  }
+  .header__title {
+    font-size: 10rem;
+  }
+  .header__title-info {
+    font-size: 2.4rem;
+  }
+  .header__underline {
+    width: 55px;
+    height: 3px;
+  }
+  .header__info-box {
+    font-size: 2rem;
+  }
+  .header__info-summer-season {
+    font-size: 1.6rem;
+  }
+  .header__description {
+    font-size: 1.8rem;
+  }
+  .header__icons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: absolute;
+    left: 0;
+    gap: 3rem;
+    height: 100%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .header__icons i {
+    font-size: 3.6rem;
+    -webkit-transition: color 0.3s;
+    transition: color 0.3s;
+  }
+  .header__icons i:hover {
+    color: #d3ccaa;
+  }
+  .aboutus__doodle img {
+    height: 90px;
+  }
+}
+@media (min-width: 1200px) {
+  .nav__link {
+    font-size: 2.8rem;
+  }
+  .header__box {
+    padding: 15rem 15rem 10rem 15rem;
+  }
+  .header__title {
+    font-size: 13rem;
+  }
+  .header__title-box {
+    margin-bottom: 4em;
+  }
+  .header__info-box {
+    margin-bottom: 3em;
+  }
+  .header__description {
+    margin-bottom: 4em;
+  }
+  .header__button-contact {
+    padding: 0.75em 2em;
+    font-size: 2rem;
+  }
+}/*# sourceMappingURL=style.css.map */
