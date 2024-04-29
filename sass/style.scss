@@ -15,6 +15,7 @@ body {
   font-family: 'Lora', serif;
   overflow-x: hidden;
   background-color: #F2F1EC;
+  color: #333;
 }
 
 
@@ -225,35 +226,162 @@ body {
     
   }
 }
-
+.doodle {
+  overflow-x: hidden;
+  img {
+    height: 50px;
+  }
+}
 
 .aboutus {
   margin: 0 auto;
-  padding: 3em 2em;
-  &__doodle {
-    overflow-x: hidden;
-    img {
-      height: 50px;
-    }
-  }
+  padding: 3em;
+  
 
   &__title {
-    display: inline;
-    font-size: 3rem;
+    
+    font-size: 3.4rem;
     font-weight: bold;
     font-family: 'Abril Fatface', serif;
   }
 
   &__title-info
    {
-    display: inline;
+    
     font-size: 1.4rem;
    }
 
-   img {
-    width: 100%;
+   
+
+   &__infos {
+    margin: 3em 0 1em 0;
    }
 
+   &__main-box {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+   }
+
+   &__info {
+    font-size: 1.6rem;
+   }
+
+   &__img {
+    margin-top: 2em;
+    img {
+      height: 200px;
+      width: 100%;
+      object-fit: cover;
+
+     }
+   }
+
+}
+
+.offer {
+  padding: 3em;
+
+  &__title {
+    font-size: 3.4rem;
+    font-weight: bold;
+    font-family: 'Abril Fatface', serif;
+  }
+
+  &__title-sub {
+    font-size: 1.4rem;
+  }
+
+  &__info {
+    margin: 1.5em 0;
+    font-size: 1.6rem;
+  }
+
+  &__info-tourists {
+    padding: 1em;
+    background-color: #fff;
+  }
+
+  &__add {
+    text-align: center;
+    font-size: 1.4rem;
+    color: #333;
+    font-weight: bold;
+
+    &-bottom {
+      margin-bottom: 2em;
+    }
+  }
+
+  &__img {
+    img {
+      width: 100%;
+      height: 130px;
+      object-fit: cover;
+    }
+  }
+}
+
+.contact {
+  padding: 3em;
+
+  &__title {
+    margin-bottom: 1em;
+    font-size: 3.4rem;
+    font-weight: bold;
+    font-family: 'Abril Fatface', serif;
+    text-align: center;
+  }
+
+  &__infos {
+    padding: 1em 0;
+    margin-bottom: 5em;
+    text-align: center;
+    background-color: #fff;
+  }
+
+  &__address-title, &__hours-title, &__contact-title, &__socials-title {
+    font-size: 2.2rem;
+    font-weight: bold;
+    font-family: 'Abril Fatface', serif;
+  }
+
+  &__box {
+    margin: 2em 0
+  }
+
+  &__info {
+    font-size: 1.6rem;
+  }
+
+  &__hours-more {
+    font-weight: bold;
+    font-size: 1.4rem;
+  }
+
+  &__link {
+    font-size: 2rem;
+    color: #333;
+    transition: color .3s;
+  }
+
+  &__links {
+    margin-top: 1em;
+  }
+
+  &__link--fb {
+    margin-right: 1em;
+  }
+
+  &__map {
+    height: 300px;
+    width: 100%;
+  }
+}
+
+.map {
+  height: 100%;
+  width: 100%;
 }
 
 
@@ -266,9 +394,22 @@ body {
   color: #333;
 }
 
+.footer {
+  margin-top: 2em;
+  padding: 2em;
+  text-align: center;
+  background-color: #333;
+  color: #fff;
+  font-size: 1.4rem;
+   a {
+    color: #d3ccaa;
+   }
+}
+
 
 @media (min-width: 568px) {
   .header {
+    
     &__title {
       font-size: 6.8rem;
     }
@@ -283,6 +424,32 @@ body {
       font-size: 3.2rem;
     }
   }
+
+  .aboutus {
+    &__img {
+      img {
+        height: 300px;
+      }
+    }
+  }
+
+  .offer {
+    
+    &__img {
+      img {
+        height: 180px;
+      }
+    }
+  }
+
+  .contact {
+    &__title {
+      font-size: 5rem;
+      margin-bottom: 0.5em;
+    }
+  }
+
+  
 }
 
 @media (min-width: 768px) {
@@ -290,6 +457,30 @@ body {
     &__box {
       padding: 12em 3em 5em 3em;
     }
+
+    
+  }
+  .aboutus {
+    padding: 3em 5em;
+    &__title {
+      font-size: 4rem;
+    }
+  }
+
+  .offer {
+    padding: 3em 5em;
+    &__title {
+      font-size: 4rem;
+    }
+    &__img {
+      img {
+        height: 240px;
+      }
+    }
+  }
+
+  .contact {
+    padding: 3em 5em;
   }
 }
 
@@ -382,11 +573,130 @@ body {
     }
   }
 
+  .doodle {
+    img {
+      height: 90px;
+    }
+  }
+
   .aboutus {
-    &__doodle {
+    padding: 10em;
+    
+
+    &__title {
+      font-size: 5rem;
+    }
+
+    &__title-info {
+      font-size: 1.6rem;
+    }
+
+    &__info {
+      font-size: 1.8rem;
+    }
+
+    &__infos {
+      margin: 5em 0 3em 0;
+    }
+
+    &__boxes {
+      display: flex;
+      margin-top: 4em;
+      gap: 7em;
+    }
+
+    &__main-box {
+      justify-content: space-around;
+      width: 49.5%;
+    }
+
+    &__img {
+      display: flex;
+      margin-top: 0;
+      width: 50%;
+      
+
       img {
-        height: 90px;
+        height: auto;
       }
+    }
+  }
+
+  .offer {
+    padding: 10em;
+    &__img {
+      img {
+        height: 330px;
+      }
+    }
+    &__title {
+      font-size: 5rem;
+    }
+
+    &__title-sub {
+      font-size: 1.6rem;
+    }
+
+    &__info {
+      font-size: 1.8rem;
+    }
+
+    &__info-tourists {
+      text-align: center;
+      padding: 2em 10em;
+      
+    }
+
+    &__add {
+      font-size: 1.6rem;
+    }
+
+    &__img {
+      img {
+        height: 500px;
+      }
+    }
+  }
+
+  .contact {
+    padding: 10em;
+
+    &__title {
+      margin-bottom: 1em;
+    }
+
+    i {
+      font-size: 3rem;
+      transition: color .3s;
+
+      &:hover {
+        color: rgb(180, 187, 157);
+      }
+    }
+
+    &__address-title, &__hours-title, &__contact-title, &__socials-title {
+      font-size: 3rem;
+    }
+
+    &__info {
+      font-size: 1.8rem;
+    }
+
+    &__main-box {
+      display: flex;
+      gap: 3em;
+
+    }
+
+    &__infos {
+      padding: 4em 0;
+      margin-bottom: 0;
+      width: 50%;
+    }
+
+    &__map {
+      height: auto;
+      width: 50%;
     }
   }
 }
@@ -421,6 +731,12 @@ body {
     &__button-contact {
       padding: .75em 2em;
       font-size: 2rem;
+    }
+  }
+
+  .aboutus {
+    &__img {
+      max-height: 335px;
     }
   }
 }
